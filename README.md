@@ -1,4 +1,4 @@
-#将report-template目录替换apache-jmeter-4.0\bin\report-template目录即可
+# 将report-template目录替换apache-jmeter-4.0\bin\report-template目录即可
 
 
 可以写个bat进行html报告生成，在apache-jmeter-4.0目录下创建ResultReport文件夹和bat文件

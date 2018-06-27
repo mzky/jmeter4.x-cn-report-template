@@ -22,3 +22,5 @@
 %CD%\bin\jmeter -g %CD%\jtl报告名称.jtl -o %CD%\ResultReport\%file%\
 
 ----------------------------------------
+
+汉化效果：https://www.jianshu.com/p/b9a1a43d3ffd

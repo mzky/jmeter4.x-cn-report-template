@@ -10,41 +10,7 @@
 ----------------------------------------
 脚本20180710已改进为提示选择jtl文件
 ----------------------------------------
-<# :: 生成html报告脚本 by mzky 20180710
-@color 2f
-@echo off
-@set h=%time:~0,2%
-@set h=%h: =0%
-@set file=%date:~0,4%%date:~5,2%%date:~8,2%%h%%time:~3,2%%time:~6,2%
-@echo 等待选择jtl文件...
-@set jtlname=''
-for /f "delims=" %%I in ('powershell -noprofile "iex (${%~f0} | out-string)"') do (
-@set jtlname=%%~I
-)
-if exist  %jtlname% (
-@echo 选择的文件：%jtlname%
-@echo 生成报告中...
-@md %CD%\ResultReport\%file%
-@cd %CD%\bin\
-@call jmeter -g %jtlname% -o %CD%\ResultReport\%file%\
-@echo 生成的报告路径：%CD%\ResultReport\%file%\
-)else (
-@echo 已取消选择，如想再次选择，需要重新执行本脚本！
-)
-@pause
-exit
-#>
-
-Add-Type -AssemblyName System.Windows.Forms
-$f = new-object Windows.Forms.OpenFileDialog
-$f.InitialDirectory = pwd
-$f.Filter = "JTL Files (*.jtl)|*.jtl|All Files (*.*)|*.*"
-$f.ShowHelp = $false
-$f.Multiselect = $false
-[void]$f.ShowDialog()
-if ($f.Multiselect) { $f.FileNames } else { $f.FileName }
-
-
+## bat脚本： https://github.com/mzky/jmeter4.0-cn-report-template/wiki
 
 
 ## 汉化效果：https://www.jianshu.com/p/b9a1a43d3ffd

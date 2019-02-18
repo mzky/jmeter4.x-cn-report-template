@@ -10,7 +10,5 @@
 ----------------------------------------
 脚本20180710已改进为提示选择jtl文件
 ----------------------------------------
-## bat脚本： https://github.com/mzky/jmeter4.0-cn-report-template/wiki
-
 
 ## 汉化效果：https://www.jianshu.com/p/b9a1a43d3ffd
